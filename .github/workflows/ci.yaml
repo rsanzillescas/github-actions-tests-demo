@@ -24,7 +24,7 @@ jobs:
         docker cp $id:/app/target/nextest/ci/testresults.xml .
         docker rm $id
     - name: Publish test results
-      uses: rsanzillescas/github-actions-tests-demo@v1
+      uses: EnricoMi/github-actions-tests-demo@v1
       with:
         files: "testresults.xml"
     - name: Build final Docker image
